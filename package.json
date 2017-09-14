@@ -1,6 +1,6 @@
 {
   "name": "del-nm-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Delete `node_modules` and lockfile (if any)",
   "license": "MIT",
   "repository": "https://github.com/luftywiranda13/del-nm-cli",
