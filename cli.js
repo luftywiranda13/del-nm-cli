@@ -25,9 +25,11 @@ updateNotifier({pkg: cli.pkg}).notify();
 (function () {
   const res = delNm(cli.input.toString());
 
-  console.log('Deleted:');
+  if (res.length !== 0) {
+    console.log('Deleted:');
 
-  for (let i = 0; i < res.length; i++) {
-    console.log(res[i]);
+    for (let i = 0; i < res.length; i++) {
+      console.log(res[i]);
+    }
   }
 })();
