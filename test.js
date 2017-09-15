@@ -7,7 +7,7 @@ const execa = require('execa');
 const makeDir = require('make-dir');
 const tempy = require('tempy');
 
-it('description', async () => {
+test('CLI', async () => {
   const tempDir = tempy.directory();
   makeDir.sync(path.join(tempDir, 'node_modules'));
 
