@@ -7,7 +7,7 @@ const updateNotifier = require('update-notifier');
 
 const cli = meow(`
 	Usage
-	  $ del-nm <path|glob>
+	  $ del-nm <path>
 
 	Examples
 	  $ del-nm

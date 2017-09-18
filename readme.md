@@ -19,7 +19,7 @@ npm install --global del-nm-cli
 $ del-nm --help
 
   Usage
-    $ del-nm <path|glob>
+    $ del-nm <path>
 
   Examples
     $ del-nm .
