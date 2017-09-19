@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-
 const execa = require('execa');
 const makeDir = require('make-dir');
 const tempy = require('tempy');
