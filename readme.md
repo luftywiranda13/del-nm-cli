@@ -5,7 +5,9 @@
 [![Build Status: Windows](https://img.shields.io/appveyor/ci/luftywiranda13/del-nm-cli/master.svg)](https://ci.appveyor.com/project/luftywiranda13/del-nm-cli)
 [![Downloads Status](https://img.shields.io/npm/dm/del-nm-cli.svg)](https://npm-stat.com/charts.html?package=del-nm-cli&from=2016-04-01)
 
-Delete `node_modules` and lockfile (if any)
+Delete `node_modules` and lockfiles.
+
+Useful to perform fresh installation of dependencies.
 
 ## Installation
 
