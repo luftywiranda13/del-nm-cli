@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "del-nm": "^2.2.0",
-    "meow": "^3.7.0",
+    "meow": "^4.0.0",
     "update-notifier": "^2.2.0"
   },
   "devDependencies": {
