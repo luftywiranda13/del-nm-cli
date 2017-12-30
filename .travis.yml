@@ -2,9 +2,12 @@ language: node_js
 notifications:
   email: false
 node_js:
-  - 'node'
+  - '8'
   - '6'
   - '4'
+script:
+  - npm run lint
+  - npm test
 branches:
   only:
     - master

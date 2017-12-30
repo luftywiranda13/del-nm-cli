@@ -2,10 +2,10 @@
 
 [![Package Version](https://img.shields.io/npm/v/del-nm-cli.svg)](https://www.npmjs.com/package/del-nm-cli)
 [![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/del-nm-cli/master.svg)](https://travis-ci.org/luftywiranda13/del-nm-cli)
-[![Build Status: Windows](https://img.shields.io/appveyor/ci/luftywiranda13/del-nm-cli/master.svg)](https://ci.appveyor.com/project/luftywiranda13/del-nm-cli)
+[![Build Status: Windows](https://ci.appveyor.com/api/projects/status/0fpvo92qlwpt5l3t/branch/master?svg=true)](https://ci.appveyor.com/project/luftywiranda13/del-nm-cli/branch/master)
 [![Downloads Status](https://img.shields.io/npm/dm/del-nm-cli.svg)](https://npm-stat.com/charts.html?package=del-nm-cli&from=2016-04-01)
 
-> Delete `node_modules` and lockfiles.
+Delete `node_modules` and lockfiles.
 
 Useful to perform fresh installation of dependencies.
 
@@ -21,10 +21,10 @@ npm install --global del-nm-cli
 $ del-nm --help
 
   Usage
-    $ del-nm <path>
+    $ del-nm [path]
 
   Examples
-    $ del-nm .
+    $ del-nm
     $ del-nm foo
     $ del-nm foo/bar
 ```
@@ -35,4 +35,4 @@ $ del-nm --help
 
 ## License
 
-MIT &copy; [Lufty Wiranda](https://www.instagram.com/luftywiranda13)
+MIT &copy; [Lufty Wiranda](https://www.luftywiranda.com)
