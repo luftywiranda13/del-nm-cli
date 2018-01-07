@@ -10,7 +10,7 @@
     "url": "https://www.luftywiranda.com"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "precommit": "remove-lockfiles",
@@ -26,7 +26,7 @@
     "cli.js"
   ],
   "dependencies": {
-    "del-nm": "^2.2.0",
+    "del-nm": "^3.0.0",
     "meow": "^4.0.0",
     "update-notifier": "^2.3.0"
   },
