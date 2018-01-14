@@ -5,18 +5,32 @@ const delNm = require('del-nm');
 const meow = require('meow');
 const updateNotifier = require('update-notifier');
 
-const cli = meow(`
+const cli = meow(
+  `
 	Usage
-	  $ del-nm [path]
+	  $ del-nm [path|options]
+
+  Options
+    -l, --lockfiles=[boolean]  Delete lockfiles [default: true]
 
 	Examples
 	  $ del-nm
-	  $ del-nm foo
-	  $ del-nm ../bar
-`);
+    $ del-nm foo
+    $ del-nm bar --lockfiles=false
+`,
+  {
+    flags: {
+      lockfiles: {
+        alias: 'l',
+        type: 'boolean',
+        default: true,
+      },
+    },
+  }
+);
 
 updateNotifier({ pkg: cli.pkg }).notify();
 
-delNm(cli.input[0]).then(paths => {
+delNm({ cwd: cli.input[0], lockfiles: cli.flags.lockfiles }).then(paths => {
   console.log(paths.join('\n'));
 });

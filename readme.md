@@ -20,12 +20,15 @@ npm install --global del-nm-cli
 $ del-nm --help
 
   Usage
-    $ del-nm [path]
+    $ del-nm [path|options]
+
+  Options
+    -l, --lockfiles=[boolean]  Delete lockfiles [default: true]
 
   Examples
     $ del-nm
     $ del-nm foo
-    $ del-nm foo/bar
+    $ del-nm bar --lockfiles=false
 ```
 
 ## Related
