@@ -2,6 +2,7 @@
 'use strict';
 
 const delNm = require('del-nm');
+const Listr = require('listr');
 const meow = require('meow');
 const updateNotifier = require('update-notifier');
 
@@ -31,6 +32,24 @@ const cli = meow(
 
 updateNotifier({ pkg: cli.pkg }).notify();
 
-delNm({ cwd: cli.input[0], lockfiles: cli.flags.lockfiles }).then(paths => {
-  console.log(paths.join('\n'));
-});
+new Listr([
+  {
+    title: `Delete node_modules ${
+      cli.flags.lockfiles ? 'and lockfiles' : 'only'
+    }`,
+    task: () =>
+      delNm({ cwd: cli.input[0], lockfiles: cli.flags.lockfiles })
+        .then(res => {
+          if (res.length === 0) {
+            throw new Error('Nothing to delete');
+          }
+        })
+        .catch(err => {
+          throw err;
+        }),
+  },
+])
+  .run()
+  .catch(() => {
+    process.exit(1);
+  });
