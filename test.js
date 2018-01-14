@@ -1,7 +1,7 @@
 'use strict';
 
 const { join } = require('path');
-const { copyFile, createFile, pathExistsSync } = require('fs-extra');
+const { copySync, createFile, pathExistsSync } = require('fs-extra');
 const execa = require('execa');
 const tempy = require('tempy');
 
@@ -9,10 +9,7 @@ describe('CLI', () => {
   test('delete `node_modules`', async () => {
     expect.assertions(4);
     const tempDir = tempy.directory();
-    await copyFile(
-      join('node_modules', 'del-nm'),
-      join(tempDir, 'node_modules')
-    );
+    copySync(join('node_modules', 'del-nm'), join(tempDir, 'node_modules'));
     await createFile(join(tempDir, 'package-lock.json'));
     await createFile(join(tempDir, 'yarn.lock'));
     await createFile(join(tempDir, 'npm-shrinkwrap.json'));
@@ -28,10 +25,7 @@ describe('CLI', () => {
   test('--lockfiles', async () => {
     expect.assertions(4);
     const tempDir = tempy.directory();
-    await copyFile(
-      join('node_modules', 'del-nm'),
-      join(tempDir, 'node_modules')
-    );
+    copySync(join('node_modules', 'del-nm'), join(tempDir, 'node_modules'));
     await createFile(join(tempDir, 'package-lock.json'));
     await createFile(join(tempDir, 'yarn.lock'));
     await createFile(join(tempDir, 'npm-shrinkwrap.json'));
