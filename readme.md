@@ -1,11 +1,10 @@
 # del-nm-cli
 
-[![Package Version](https://img.shields.io/npm/v/del-nm-cli.svg)](https://www.npmjs.com/package/del-nm-cli)
-[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/del-nm-cli/master.svg)](https://travis-ci.org/luftywiranda13/del-nm-cli)
-[![Build Status: Windows](https://ci.appveyor.com/api/projects/status/0fpvo92qlwpt5l3t/branch/master?svg=true)](https://ci.appveyor.com/project/luftywiranda13/del-nm-cli/branch/master)
-[![Downloads Status](https://img.shields.io/npm/dm/del-nm-cli.svg)](https://npm-stat.com/charts.html?package=del-nm-cli&from=2016-04-01)
+> Delete `node_modules` and lockfiles
 
-Delete `node_modules` and lockfiles.
+[![Package Version](https://img.shields.io/npm/v/del-nm-cli.svg?style=flat-square)](https://www.npmjs.com/package/del-nm-cli)
+[![Downloads Status](https://img.shields.io/npm/dm/del-nm-cli.svg?style=flat-square)](https://npm-stat.com/charts.html?package=del-nm-cli&from=2016-04-01)
+[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/del-nm-cli/master.svg?style=flat-square)](https://travis-ci.org/luftywiranda13/del-nm-cli)
 
 Useful to perform fresh installation of dependencies.
 
@@ -31,7 +30,7 @@ $ del-nm --help
 
 ## Related
 
-- [del-nm](https://github.com/luftywiranda13/del-nm) － API for this module
+* [del-nm](https://github.com/luftywiranda13/del-nm) － API for this module
 
 ## License
 

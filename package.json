@@ -13,14 +13,13 @@
     "node": ">=6"
   },
   "scripts": {
-    "precommit": "remove-lockfiles",
+    "precommit": "remove-lockfiles && xo --fix && lint-staged",
     "lint": "xo",
     "test:watch": "jest --watch",
     "test": "jest"
   },
   "bin": {
-    "del-nm": "cli.js",
-    "del-nm-cli": "cli.js"
+    "del-nm": "cli.js"
   },
   "files": [
     "cli.js"
@@ -32,38 +31,59 @@
   },
   "devDependencies": {
     "async-to-gen": "^1.3.3",
+    "eslint-config-prettier": "^2.9.0",
     "execa": "^0.9.0",
     "fs-extra": "^5.0.0",
     "husky": "^0.14.3",
     "jest": "^22.0.4",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2",
     "remove-lockfiles": "^2.0.4",
     "tempy": "^0.2.1",
     "xo": "^0.18.2"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.js$": "async-to-gen"
-    }
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "xo": {
-    "space": true,
+    "extends": "prettier",
     "envs": [
       "jest"
     ]
   },
   "keywords": [
-    "cli",
-    "cli-app",
     "clean",
+    "cleaning",
     "cleanup",
+    "cli-app",
+    "cli",
+    "cross-platform",
+    "del",
     "delete",
-    "remove",
+    "destroy",
+    "dir",
+    "directory",
+    "file",
+    "files",
+    "filesystem",
+    "folder",
+    "fs",
+    "glob",
     "node_modules",
-    "npm",
-    "yarn",
-    "package",
-    "dependencies",
-    "reinstall"
+    "reinstall",
+    "remove",
+    "rimraf",
+    "rm",
+    "rmdir",
+    "rmrf",
+    "trash",
+    "unlink"
   ]
 }

@@ -15,7 +15,7 @@ const cli = meow(`
 	  $ del-nm ../bar
 `);
 
-updateNotifier({pkg: cli.pkg}).notify();
+updateNotifier({ pkg: cli.pkg }).notify();
 
 delNm(cli.input[0]).then(paths => {
   console.log(paths.join('\n'));
