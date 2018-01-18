@@ -12,12 +12,12 @@ const cli = meow(
 	  $ del-nm [path|options]
 
   Options
-    -l, --lockfiles=[boolean]  Delete lockfiles [default: true]
+    -l, --lockfiles [boolean]  Delete lockfiles [default: true]
 
 	Examples
 	  $ del-nm
     $ del-nm foo
-    $ del-nm bar --lockfiles=false
+    $ del-nm bar --lockfiles false
 `,
   {
     flags: {
