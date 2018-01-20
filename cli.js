@@ -37,16 +37,7 @@ new Listr([
     title: `Delete node_modules ${
       cli.flags.lockfiles ? 'and lockfiles' : 'only'
     }`,
-    task: () =>
-      delNm({ cwd: cli.input[0], lockfiles: cli.flags.lockfiles })
-        .then(res => {
-          if (res.length === 0) {
-            throw new Error('Nothing to delete');
-          }
-        })
-        .catch(err => {
-          throw err;
-        }),
+    task: () => delNm({ cwd: cli.input[0], lockfiles: cli.flags.lockfiles }),
   },
 ])
   .run()
