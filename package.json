@@ -14,9 +14,8 @@
   },
   "scripts": {
     "precommit": "remove-lockfiles && xo --fix && lint-staged",
-    "lint": "xo",
     "test:watch": "jest --watch",
-    "test": "jest"
+    "test": "xo && jest"
   },
   "bin": {
     "del-nm": "cli.js"
