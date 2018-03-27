@@ -13,7 +13,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "precommit": "remove-lockfiles && xo --fix && lint-staged",
+    "precommit": "remove-lockfiles && lint-staged",
     "test:watch": "jest --watch",
     "test": "xo && jest"
   },
@@ -31,16 +31,14 @@
   },
   "devDependencies": {
     "async-to-gen": "^1.3.3",
-    "eslint-config-prettier": "^2.9.0",
     "execa": "^0.10.0",
     "fs-extra": "^5.0.0",
     "husky": "^0.14.3",
     "jest": "^22.0.6",
     "lint-staged": "^7.0.0",
-    "prettier": "^1.9.2",
     "remove-lockfiles": "^2.0.4",
     "tempy": "^0.2.1",
-    "xo": "^0.18.2"
+    "xo": "^0.20.3"
   },
   "jest": {
     "testEnvironment": "node",
@@ -49,20 +47,25 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,md}": [
+    "*.js": [
+      "xo --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
       "prettier --write",
       "git add"
     ]
   },
   "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "bracketSpacing": true,
+    "singleQuote": true
   },
   "xo": {
-    "extends": "prettier",
     "envs": [
       "jest"
-    ]
+    ],
+    "prettier": true,
+    "space": true
   },
   "keywords": [
     "clean",
