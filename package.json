@@ -35,7 +35,7 @@
     "fs-extra": "^5.0.0",
     "husky": "^0.14.3",
     "jest": "^22.0.6",
-    "lint-staged": "^7.0.0",
+    "lint-staged": "^9.0.0",
     "remove-lockfiles": "^2.0.4",
     "tempy": "^0.2.1",
     "xo": "^0.20.3"
